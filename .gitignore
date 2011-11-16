@@ -6,3 +6,7 @@
 /extension/shareJavaExt/.settings/org.eclipse.jdt.core.prefs
 /extension/shareJavaExt/.project
 /extension/shareJavaExt/project.properties
+/shareExample/.actionScriptProperties
+/shareExample/.project
+/shareExample/.settings/org.eclipse.core.resources.prefs
+/shareExample/bin-debug/DebugHostInfo.xml

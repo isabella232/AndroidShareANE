@@ -3,6 +3,7 @@ package
 	import com.jam3media.shareExt.ShareExt;
 	import com.jam3media.view.buttons.SimpleButton;
 	
+	import flash.display.Bitmap;
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
 	import flash.display.StageScaleMode;
@@ -21,7 +22,10 @@ package
 		
 		private var button:SimpleButton
 		
-	
+		[Embed(source="../_assets/ShareExentsionbackground.jpg")]
+		private var BG:Class;
+		
+		private var background:Bitmap = new BG();
 		
 		public function ShareApp()
 		{
@@ -38,12 +42,22 @@ package
 			
 			button.addEventListener(MouseEvent.CLICK,getFile);
 			
+			
+			addEventListener(Event.ADDED_TO_STAGE,onAdded);
+			
+			
+			
+			
+			
+			
+		}
+		private function onAdded(e:Event):void{
+			background.x = stage.stageWidth/2 - background.width/2;
+			addChild(background);
+			
+			button.y = stage.stageHeight-100;
+			
 			addChild(button);
-			
-			//need the time out otherwise the browse is seemingly called before the app initlizes
-			
-			
-			
 		}
 		private function getFile(e:Event):void{
 			
