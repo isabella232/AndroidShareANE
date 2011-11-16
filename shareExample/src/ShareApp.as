@@ -52,6 +52,8 @@ package
 			
 		}
 		private function onAdded(e:Event):void{
+			background.height = stage.stageHeight+50;
+			background.scaleX = background.scaleY;
 			background.x = stage.stageWidth/2 - background.width/2;
 			addChild(background);
 			
